@@ -1,0 +1,19 @@
+class Solution:
+    def maxScore(self, s: str) -> int:
+        Total=s.count('1')
+        l=[]
+        score=0
+        left=0
+        current=0
+        for i in range(len(s)-1):
+            if s[i]=='0':
+                left+=1
+            else:
+                current+=1
+            right=Total-current
+            score=right+left
+            l.append(score)
+        return max(l)
+
+
+        
