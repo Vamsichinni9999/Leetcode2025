@@ -1,0 +1,10 @@
+class Solution:
+    def countBalls(self, lowLimit: int, highLimit: int) -> int:
+        m={}
+        for i in range(lowLimit,highLimit+1):
+            k=sum(map(int,str(i)))
+            if k in m:
+                m[k]+=1
+            else:
+                m[k]=1
+        return max(m.values())
