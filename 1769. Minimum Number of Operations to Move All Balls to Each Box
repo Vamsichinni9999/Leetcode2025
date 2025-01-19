@@ -8,6 +8,7 @@ public:
             if(boxes[i]=='1'){
                 sum+=i;
                 right_ones++;
+
             }
         }
         vector <int> res(n);
